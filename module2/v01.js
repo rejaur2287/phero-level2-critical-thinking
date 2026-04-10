@@ -50,6 +50,11 @@ const course2 = { name: "Next Level Web Development" };
 
 // console.log(map.entries());
 
+// const courses = [
+//   ["Programming Hero", "Level1"],
+//   ["Next Level Web Development", "Level2"],
+// ];
+
 const courses = [
   [course1, "Level1"],
   [course2, "Level2"],
