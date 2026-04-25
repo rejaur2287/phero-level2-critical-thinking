@@ -13,3 +13,42 @@
 // "A man, a plan, a canal: Panama" -> true
 // "Level" -> true
 // "car" -> false
+
+// *Space complexity = O(n)
+// *Time complexity = O(n)
+/* const isPalindrome = (str) => {
+  const normalized = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+
+  const reversed = normalized.split("").reverse().join("");
+
+  if (reversed === normalized) {
+    return true;
+  }
+  return false;
+
+  //   console.log(normalized);
+  //   console.log(reversed);
+};
+console.log(isPalindrome("A man, a plan, a canal: Panama"));
+console.log(isPalindrome("Level")); */
+
+//? Two pointer implementation
+// *Space complexity = O(n)
+// *Time complexity = O(n)
+const isPalindromeTwoPointer = (str) => {
+  const normalized = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+
+  let left = 0;
+  let right = normalized.length - 1;
+
+  while (left < right) {
+    if (normalized[left] !== normalized[right]) {
+      return false;
+    }
+    left++;
+    right--;
+  }
+  return true;
+};
+console.log(isPalindromeTwoPointer("Level"));
+console.log(isPalindromeTwoPointer("A man, a plan, a canal: Panama"));
